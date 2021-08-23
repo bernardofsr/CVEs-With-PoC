@@ -20,13 +20,17 @@ XSS triggered and exposing the admin cookie.
 ##
 
 ### CVE-2021-38144 - Reflected XSS
-[Reserved CVE][Soon Available]
+An issue was discovered in Form Tools through 3.0.20.
+A low-privileged user can trigger Reflected XSS when a viewing form via the submission_id parameter, e.g., ```clients/forms/edit_submission.php?form_id=1&view_id=1&submission_id=[XSS] ```
+
+![alt text](https://github.com/bernardofsr/CVEs-With-PoC/blob/main/PoCs/Form%20Tools/images/ReflectedXSS.png?raw=true "Triggered Reflected XSS")
+
 
 ##
 
 ### CVE-2021-38145 - SQL Injection
 An issue was discovered in Form Tools through 3.0.20.
-SQL Injection can occur via the **export_group_id** field when a low-privileged user (client) try to export a form with data, e.g., manipulation of modules/export_manager/export.php?export_group_id=1&export_group_1_results=all&export_type_id=1
+SQL Injection can occur via the **export_group_id** field when a low-privileged user (client) try to export a form with data, e.g., manipulation of ```modules/export_manager/export.php?export_group_id=1&export_group_1_results=all&export_type_id=1```
 
 Create data table export using a normal user account by clicking *display*:
 
