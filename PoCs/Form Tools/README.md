@@ -21,7 +21,7 @@ XSS triggered and exposing the admin cookie.
 
 ### CVE-2021-38144 - Reflected XSS
 An issue was discovered in Form Tools through 3.0.20.
-A low-privileged user can trigger Reflected XSS when a viewing form via the submission_id parameter, e.g., ```clients/forms/edit_submission.php?form_id=1&view_id=1&submission_id=[XSS] ```
+A low-privileged user can trigger Reflected XSS when viewing form via the submission_id parameter, e.g., ```clients/forms/edit_submission.php?form_id=1&view_id=1&submission_id=[XSS] ```
 
 ![alt text](https://github.com/bernardofsr/CVEs-With-PoC/blob/main/PoCs/Form%20Tools/images/ReflectedXSS.png?raw=true "Triggered Reflected XSS")
 
