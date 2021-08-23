@@ -15,9 +15,9 @@ The administrator logs in and opens the page with the list of clients:
 
 ![alt text](https://github.com/bernardofsr/CVEs-With-PoC/blob/main/PoCs/Form%20Tools/images/StoredXSS2.png?raw=true "Payload triggered")
 
-### CVE-2021-38144
+### CVE-2021-38144 - Reflected XSS
 [Reserved CVE][Soon Available]
 
-### CVE-2021-38145
+### CVE-2021-38145 - SQL Injection
 [Reserved CVE][Soon Available]
 
