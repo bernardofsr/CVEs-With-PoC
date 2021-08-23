@@ -22,6 +22,8 @@ XSS triggered and exposing the admin cookie.
 ### CVE-2021-38144 - Reflected XSS
 [Reserved CVE][Soon Available]
 
+##
+
 ### CVE-2021-38145 - SQL Injection
 [Reserved CVE][Soon Available]
 
