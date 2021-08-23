@@ -6,7 +6,7 @@ When an administrator creates a customer account, it is possible for the custome
 
 ###
 
-Insertion of the payload in the "First Name" field:
+Insertion of the payload in the "First Name" (client account) field:
 
 ![alt text](https://github.com/bernardofsr/CVEs-With-PoC/blob/main/PoCs/Form%20Tools/images/StoredXSS.png?raw=true "Payload on 'First Name'")
 
