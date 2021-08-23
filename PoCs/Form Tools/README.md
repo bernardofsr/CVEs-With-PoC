@@ -15,6 +15,10 @@ The administrator logs in and opens the page with the list of clients:
 
 ![alt text](https://github.com/bernardofsr/CVEs-With-PoC/blob/main/PoCs/Form%20Tools/images/StoredXSS2.png?raw=true "Payload triggered")
 
+XSS triggered and exposing the admin cookie.
+
+##
+
 ### CVE-2021-38144 - Reflected XSS
 [Reserved CVE][Soon Available]
 
